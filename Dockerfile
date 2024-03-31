@@ -10,7 +10,7 @@ RUN . ./bin/activate
 # RUN pip install mypackage
 
 # Install dependencies
-RUN pip3 install --no-cache-dir -q -r /tmp/requirements.txt
+RUN pip install --no-cache-dir -q -r /tmp/requirements.txt
 
 # Add our code
 ADD ./webapp /opt/webapp/
