@@ -6,7 +6,7 @@ RUN apk add --no-cache --update python3 py3-pip bash
 ADD ./webapp/requirements.txt /tmp/requirements.txt
 
 RUN   python3 -m venv .
-RUN . ./activate
+RUN . ./bin/activate
 # RUN pip install mypackage
 
 # Install dependencies
