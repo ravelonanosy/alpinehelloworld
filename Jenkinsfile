@@ -1,7 +1,7 @@
 pipeline {
          agent any
 		 environment {     
-                DOCKERHUB_CREDENTIALS= credentials('dockerhub_ravelonanosy')  
+                HEROKU_API_KEY= credentials('heroku_api_key') 
                 IMAGE_NAME= alpinehelloworld-img2
                 IMAGE_TAG= latest
                 CONTAINER_NAME= alpinehelloworld-ctnr
