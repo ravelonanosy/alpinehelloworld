@@ -94,7 +94,7 @@ pipeline {
 						script {
                         
 							sh '''
-								echo 'execute appli on heroku'
+								echo 'execute appli on heroku production'
 								#apk --no-cache add npm
     								#npm install -g heroku
 	    							npm i -g heroku@7.68.0
