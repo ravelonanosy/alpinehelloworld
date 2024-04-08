@@ -16,7 +16,7 @@ pipeline {
                      
 					 sh '''
 					 echo 'build image'
-					 docker build -t ravelonanosy/$IMAGE_NAME:$IMAGE_TAG .'
+					 docker build -t ravelonanosy/$IMAGE_NAME:$IMAGE_TAG .
                      			 docker images
 					 
 					 '''
@@ -74,7 +74,7 @@ pipeline {
 							sh '''
 								echo 'execute appli on heroku'
 								heroku container:login
-								heroku create $ENV_APP_STAGING || echo "project already exist"
+								heroku create $ENV_STAGING || echo "project already exist"
 								heroku container:push -a $ENV_STAGING web
 								heroku container:release -a $ENV_STAGING web	
 								
@@ -92,7 +92,7 @@ pipeline {
 							sh '''
 								echo 'execute appli on heroku'
 								heroku container:login
-								heroku create $ENV_APP_PROD || echo "project already exist"
+								heroku create $ENV_PROD || echo "project already exist"
 								heroku container:push -a $ENV_PROD web
 								heroku container:release -a $ENV_PROD web	
 								
