@@ -84,7 +84,7 @@ pipeline {
                  }
                 stage('push in PRODUCTION and deploy') {
 				    when {
-						expression { GIT_BRANCH == 'origin/master' }			
+						expression { GIT_BRANCH == 'origin/production' }			
 				      }
                     steps {
 						script {
