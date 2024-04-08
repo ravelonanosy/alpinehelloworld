@@ -29,7 +29,7 @@ pipeline {
 				    
 							sh '''
 							echo  'run a container'
-							docker run -d --name $CONTAINER_NAME -e PORT=5000 -p 8090:5000 ravelonanosy/$IMAGE_NAME:$IMAGE_TAG'
+							docker run -d --name $CONTAINER_NAME -e PORT=5000 -p 8090:5000 ravelonanosy/$IMAGE_NAME:$IMAGE_TAG
 							docker ps
 							sleep 5
 							
@@ -41,8 +41,9 @@ pipeline {
 				 stage('test') {
 					steps {
 						script {
-							echo 'test appli URL'
+							
 							sh '''
+       							echo 'test appli URL'
 							curl http://172.17.0.1:8090
 							
 							'''
