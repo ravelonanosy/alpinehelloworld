@@ -5,8 +5,8 @@ pipeline {
                 IMAGE_NAME= alpinehelloworld-img
                 IMAGE_TAG= latest
                 CONTAINER_NAME= alpinehelloworld-ctnr
-		ENV_STAGING=nra-staging
-		ENV_PROD=nra-production
+		ENV_STAGING= nra-staging
+		ENV_PROD= nra-production
                  				 
          } 
          stages {
