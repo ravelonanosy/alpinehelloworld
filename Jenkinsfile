@@ -75,7 +75,8 @@ pipeline {
 							sh '''
 								echo 'execute appli on heroku'
 								#apk --no-cache add npm
-    								npm install -g heroku
+    								#npm install -g heroku
+	    							npm i -g heroku@7.68.0
 								heroku container:login
 								heroku create $ENV_STAGING || echo "project already exist"
 								heroku container:push -a $ENV_STAGING web
@@ -95,7 +96,8 @@ pipeline {
 							sh '''
 								echo 'execute appli on heroku'
 								#apk --no-cache add npm
-    								npm install -g heroku
+    								#npm install -g heroku
+	    							npm i -g heroku@7.68.0
 								heroku container:login
 								heroku create $ENV_PROD || echo "project already exist"
 								heroku container:push -a $ENV_PROD web
