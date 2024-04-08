@@ -5,8 +5,8 @@ pipeline {
                 IMAGE_NAME= alpinehelloworld-img2
                 IMAGE_TAG= latest
                 CONTAINER_NAME= alpinehelloworld-ctnr
-				ENV_STAGING=nra-staging
-				ENV_PROD=nra-production
+		ENV_STAGING=nra-staging
+		ENV_PROD=nra-production
                  				 
          } 
          stages {
@@ -17,7 +17,7 @@ pipeline {
 					 sh '''
 					 echo 'build image'
 					 docker build -t ravelonanosy/$IMAGE_NAME:$IMAGE_TAG .'
-                     docker images
+                     			 docker images
 					 
 					 '''
 					}
