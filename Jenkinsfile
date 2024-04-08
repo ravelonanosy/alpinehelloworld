@@ -1,12 +1,12 @@
 pipeline {
          agent any
 		 environment {     
-                HEROKU_API_KEY= credentials('heroku_api_key') 
-                IMAGE_NAME= alpinehelloworld-img
-                IMAGE_TAG= latest
-                CONTAINER_NAME= alpinehelloworld-ctnr
-		ENV_STAGING= nra-staging
-		ENV_PROD= nra-production
+                HEROKU_API_KEY= 'credentials('heroku_api_key')'
+                IMAGE_NAME= 'alpinehelloworld-img'
+                IMAGE_TAG= 'latest'
+                CONTAINER_NAME= 'alpinehelloworld-ctnr'
+		ENV_STAGING= 'nra-staging'
+		ENV_PROD= 'nra-production'
                  				 
          } 
          stages {
